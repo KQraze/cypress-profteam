@@ -1,0 +1,9 @@
+{
+  "need_name": "Сценарий с ценой по диапазону",
+  "price_type": 1,
+  "min_price": 1,
+  "max_price": 2000,
+  "responsibilities": "Кушать пиццу",
+  "requirements": "Пить колу",
+  "type_employment": 2
+}

@@ -1,0 +1,9 @@
+{
+  "need_name": "Сценарий со всеми негативными исходами (диапазон)",
+  "price_type": 1,
+  "min_price": 1000,
+  "max_price": 100,
+  "responsibilities": "Кушать пиццу",
+  "requirements": "Пить колу",
+  "type_employment": 2
+}

@@ -1,0 +1,8 @@
+{
+  "need_name": "Сценарий с фиксированной ценой",
+  "price_type": 3,
+  "fixed_price": 2000,
+  "responsibilities": "Кушать пиццу",
+  "requirements": "Пить колу",
+  "type_employment": 2
+}
