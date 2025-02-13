@@ -65,9 +65,6 @@ const sendFile = (negative) => {
     }
 };
 
-const acceptWorkspace = () => workspace.accept().click()
-const declineWorkspace = () => workspace.decline().click()
-
 describe('interaction-in-workspace', () => {
     beforeEach(function () {
         cy.viewport(1920, 1080)
@@ -81,6 +78,10 @@ describe('interaction-in-workspace', () => {
     it('Переход на соответствующую стажировку (позитивный сценарий)', goToInternship);
     it('Отправка сообщения, некорректный тип файла (негативный сценарий)', () => sendFile(true));
 })
+
+const acceptWorkspace = () => workspace.accept().click()
+const declineWorkspace = () => workspace.decline().click()
+
 
 describe('accept-workspace', () => {
     beforeEach(() => {

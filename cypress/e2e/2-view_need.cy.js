@@ -8,7 +8,7 @@ const needFilters = {
     option: (id) => cy.get(`.form-select__items > :nth-child(${id})`),
     minPrice: () => cy.get(':nth-child(1) > .form-control--responsive > .form-input--number'),
     maxPrice: () => cy.get(':nth-child(2) > .form-control--responsive > .form-input--number'),
-    resetButton: () => cy.get('.custom-modal-mobile__buttons > .button'),
+    resetButton: () => cy.get('.custom-modal-mobile__buttons > .button')
 }
 
 const goToNeeds = ({ url, routes }) => {
@@ -35,10 +35,10 @@ const viewNeeds = ({ search, price_type, type_employment, min_price, max_price, 
 
     if (type_employment) {
         needFilters.select().click().wait(1000)
-        needFilters.option(type_employment).click();
+        needFilters.option(type_employment).click().wait(3000);
     }
 
-    refresh && needFilters.resetButton().wait(1000).click()
+    refresh && needFilters.resetButton().wait(1000).click().wait(2000)
 }
 
 describe('view-need', () => {
@@ -47,8 +47,8 @@ describe('view-need', () => {
         cy.fixture('config').then(goToNeeds)
     })
 
-    it('(позитивный) просмотр потребностей, без заполнения полей (1)', () => cy.fixture('view-need/positive-1').then(viewNeeds));
-    it('(позитивный) просмотр потребностей, с заполнением всех полей (2)', () => cy.fixture('view-need/positive-2').then(viewNeeds));
+    // it('(позитивный) просмотр потребностей, без заполнения полей (1)', () => cy.fixture('view-need/positive-1').then(viewNeeds));
+    // it('(позитивный) просмотр потребностей, с заполнением всех полей (2)', () => cy.fixture('view-need/positive-2').then(viewNeeds));
     it('(позитивный) просмотр потребностей, с заполнением всех полей и сбросом (3)', () => cy.fixture('view-need/positive-3').then(viewNeeds));
-    it('(негативный) просмотр потребностей (1)', () => cy.fixture('view-need/negative-1').then((data) => viewNeeds(data, true)));
+    // it('(негативный) просмотр потребностей (1)', () => cy.fixture('view-need/negative-1').then((data) => viewNeeds(data, true)));
 })

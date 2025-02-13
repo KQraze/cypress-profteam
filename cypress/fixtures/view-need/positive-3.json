@@ -3,5 +3,6 @@
   "price_type": 1,
   "type_employment": 2,
   "min_price": 100,
-  "max_price": 10000
+  "max_price": 10000,
+  "refresh": true
 }
